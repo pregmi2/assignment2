@@ -1,0 +1,38 @@
+<!--Prabal Regmi 6/20/2021 300522389 edit.ejs-->
+<%- include ../partials/header.ejs %>
+<%- include ../partials/top_nav.ejs %>
+
+<div class="container">
+    <div clas="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="nameTextField">Business Name:</label>
+                    <input type="text" class="form-control" id="nameTextField" placeholder="Enter Business Name" name="name" 
+                    value="<%= contact.name %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nameTextField">Business Phone Number:</label>
+                    <input type="text" class="form-control" id="nameTextField" placeholder="Enter Business Phone Number" name="number" 
+                    value="<%= contact.number %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nameTextField">Business Email Address:</label>
+                    <input type="text" class="form-control" id="nameTextField" placeholder="Enter Business Email Address" name="email" 
+                    value="<%= contact.email %>" required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i>Submit</button>
+                <button class="btn btn-warning"> 
+                    <a herf="/contacts" > <i class="fas fa-undo"></i>Cancel</a></button> 
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ../partials/bot_nav.ejs %>
+<%- include ../partials/footer.ejs %>
